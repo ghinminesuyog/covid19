@@ -1,0 +1,39 @@
+<div id="sidebar">
+    <div id="side-bar-logo-container" (click)="toggleSidebar()">
+        <img src="/assets/corona.svg">
+    </div>
+
+    <div id="sidebar-items">
+        <a class="item" href="javascript:" (click)="navigateToPage('home')"
+            [ngClass]="{'isSelected' : isSelected == 'home' }">
+            <i class="fa fa-home"></i>
+            <div>
+                Home
+            </div>
+        </a>
+
+        <a class="item" href="javascript:" (click)="navigateToPage('map')"
+            [ngClass]="{'isSelected' : isSelected == 'map' }">
+            <i class="fa fa-map"></i>
+            <div>
+                Map
+            </div>
+        </a>
+
+        <a class="item" href="javascript:" (click)="navigateToPage('about')"
+            [ngClass]="{'isSelected' : isSelected == 'about' }">
+            <i class="fa fa-question-circle"></i>
+            <div>
+                About
+            </div>
+        </a>
+
+        <a class="item" href="javascript:" (click)="navigateToPage('resources')"
+            [ngClass]="{'isSelected' : isSelected == 'resources' }">
+            <i class="fa fa-book"></i>
+            <div>
+                Resources
+            </div>
+        </a>
+    </div>
+</div>

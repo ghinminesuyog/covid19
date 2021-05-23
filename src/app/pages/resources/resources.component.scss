@@ -1,0 +1,18 @@
+.resources-content {
+    @media screen and(min-width:700px) {
+        padding: 0 4rem;
+    }
+    h1 {
+        color: #868b8e;
+        font-weight: 300;
+        padding-bottom: 3rem;
+        font-size: 1.5rem;
+
+        a {
+            color: #868b8e;
+            font-weight: 600;
+            text-decoration: none;
+            line-break: anywhere;
+        }
+    }
+}

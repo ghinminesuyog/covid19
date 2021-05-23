@@ -1,0 +1,95 @@
+#country-list-component {
+    font-weight: 300;
+    height: 250px;
+    overflow: auto;
+
+    box-shadow: 1px 1px 5px;
+    border-radius: 10px;
+
+    @media screen and (max-width:760px) {
+        display: none;
+        
+    }
+    .search-bar {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        margin: 10px;
+
+        input {
+            font-family: "Lato";
+        }
+    }
+    .country-list {
+       
+        display: flex;
+        flex-direction: column;
+
+        .list-header,
+        .country {
+            display: flex;
+            flex-direction: row;
+            .col {
+                flex: 1;
+                display: flex;
+                justify-content: space-between;
+                &:hover {
+                    .actions {
+                        i {
+                            opacity: 1;
+                        }
+                    }
+                }
+
+                .actions {
+                    i {
+                        transition: all 500ms ease;
+                        opacity: 0;
+                        color: rgba(0, 0, 0, 0.2);
+                    }
+                }
+
+                &.name {
+                    font-weight: 500;
+                }
+                &.confirmed {
+                    color: #ff073a;
+                }
+                &.recovered {
+                    color: #2ba848;
+                }
+                &.deceased {
+                    color: #6e777f;
+                }
+            }
+            &.list-header {
+                background-color: #eee;
+                border-bottom: 1px solid #ccc;
+                // padding: 10px 0;
+                position: sticky;
+                width: 100%;
+                top: 0;
+                cursor: pointer;
+                font-weight: 500;
+
+                .col {
+                    border-right: 1px solid #fff;
+                    padding: 10px;
+                }
+            }
+            &:nth-child(even) {
+                // .name {
+                background-color: #edeeef;
+                // }
+            }
+
+            &.country {
+                padding: 1rem;
+            }
+        }
+    }
+}
+.isSelected {
+    opacity: 1 !important;
+    color: #333 !important;
+}

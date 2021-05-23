@@ -1,0 +1,62 @@
+<div id="country-list-component">
+    <!-- <div class="search-bar">
+        <input [(ngModel)]="searchTerm" placeholder="Enter a country" (ngModelChange)="searchFor($event)">
+    </div> -->
+
+    <div class="country-list">
+        <div class="list-header">
+            <div class="col name" (click)="sortByName()">
+                Country
+                <span class="actions">
+                    <i class="fa fa-arrow-up" [ngClass]="{'isSelected' : isSortedAscendingByName == true}"></i>
+                    <i class="fa fa-arrow-down" [ngClass]="{'isSelected' : isSortedAscendingByName == false}"></i>
+                </span>
+            </div>
+            
+            <div class="col confirmed" (click)="sortByConfirmed()">
+                Confirmed
+                <span class="actions">
+                    <i class="fa fa-arrow-up" [ngClass]="{'isSelected' : isSortedAscendingByConfirmed == true}"></i>
+                    <i class="fa fa-arrow-down" [ngClass]="{'isSelected' : isSortedAscendingByConfirmed == false}"></i>
+                </span>
+            </div>
+
+
+            <div class="col recovered" (click)="sortByRecovered()">
+                Recovered
+                <span class="actions">
+                    <i class="fa fa-arrow-up" [ngClass]="{'isSelected' : isSortedAscendingByRecovered == true}"></i>
+                    <i class="fa fa-arrow-down" [ngClass]="{'isSelected' : isSortedAscendingByRecovered == false}"></i>
+                </span>
+            </div>
+
+            <div class="col deceased" (click)="sortByDeceased()">
+                Deceased
+                <span class="actions">
+                    <i class="fa fa-arrow-up" [ngClass]="{'isSelected' : isSortedAscendingByDeceased == true}"></i>
+                    <i class="fa fa-arrow-down" [ngClass]="{'isSelected' : isSortedAscendingByDeceased == false}"></i>
+                </span>
+            </div>
+        </div>
+
+        <div class="countries">
+            <div class="country" *ngFor="let country of displayCountries">
+                <div class="col name">
+                    {{country.name}}
+                </div>
+              
+                <div class="col confirmed">
+                    {{country.latest.confirmed | number}}
+                </div>
+                
+                <div class="col recovered">
+                    {{country.latest.recovered | number}}
+                </div>
+                <div class="deceased col">
+                    {{country.latest.deceased | number}}
+                </div>
+            </div>
+        </div>
+
+    </div>  
+</div>

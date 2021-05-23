@@ -1,0 +1,25 @@
+<h1>
+    Global
+</h1>
+<div class="charts">
+
+
+    <global-chart class="chart" [graphNumber]="confirmed" graphName="confirmed" [data]="confirmedChartData"
+        (click)="selectMatrix('confirmed')" [ngClass]="{'confirmed' : graphName == 'confirmed'}">
+    </global-chart>
+
+    <!-- <global-chart class="chart" [graphNumber]="active" graphName="active" [data]="activeChartData" 
+    (click)="selectMatrix('active')" [ngClass]="{'active' : graphName == 'active'}">
+    </global-chart> -->
+
+    <global-chart class="chart" [graphNumber]="recovered" graphName="recovered" [data]="recoveredChartData"
+        (click)="selectMatrix('recovered')" [ngClass]="{'recovered' : graphName == 'recovered'}">
+    </global-chart>
+
+    <global-chart class="chart" [graphNumber]="deceased" graphName="deceased" [data]="deathChartData"
+        (click)="selectMatrix('deceased')" [ngClass]="{'deceased' : graphName == 'deceased'}">
+    </global-chart>
+
+</div>
+
+<global-map-graph [graphName]="graphName"></global-map-graph>

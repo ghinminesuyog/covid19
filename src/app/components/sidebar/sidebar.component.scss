@@ -1,0 +1,67 @@
+#sidebar {
+    background-color: #eeede7;
+    color: #fff;
+
+    display: flex;
+    flex-direction: column;
+
+    height: 100%;
+
+    #side-bar-logo-container {
+        padding-top: 1rem;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+    }
+    #sidebar-items {
+        transition: all 300ms ease;
+
+        display: flex;
+        flex-direction: column;
+        .item {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-start;
+            margin: 1rem 0;
+            padding: 1rem;
+            cursor: pointer;
+            transition: all 700ms ease;
+            color: #b9b7bd;
+            text-decoration: none;
+
+            i {
+                font-size: 2rem;
+                // color: #b9b7bd;
+            }
+            div {
+                width: 0;
+                overflow: hidden;
+                transition: all 700ms ease;
+            }
+
+            &:hover{
+                background-color: #e6e6e6;
+            }
+           
+        }
+        & .isSelected {
+            color: #868b8e ;
+
+           
+        }
+    }
+
+    &:hover {
+        #sidebar-items {
+            .item {
+                div {
+                    // display: block;
+                    // transform: translateX(0);
+                    width: auto;
+                    margin-left: 1rem;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,105 @@
+* {
+    color: #868b8e;
+}
+.homepage {
+    overflow: hidden;
+    .country-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        .column {
+            max-width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            h1 {
+                font-size: 3rem;
+                white-space: break-spaces;
+            }
+            .searchbar {
+                width: 100%;
+                // display: flex;
+                // flex-direction: column;
+                position: relative;
+                #search {
+                    display: flex;
+                    flex-direction: row;
+                    border: 2px solid #ccc;
+                    width: 300px;
+                    max-width: 100%;
+                    padding: 10px;
+                    border-radius: 10px;
+                    box-sizing: border-box;
+                    i,
+                    input {
+                        color: #ccc;
+                    }
+                    input {
+                        border: none;
+                        outline: none;
+                        width: 100%;
+                        font-family: "Lato";
+                    }
+                }
+                #country-list {
+                    position: absolute;
+                    width: 300px;
+                    background: white;
+                    padding: 10px;
+                    z-index: 10;
+                    box-shadow: 1px 5px 10px #ccc;
+                    // border-radius: 0px 0px 10px 10px;
+                    border-radius: 10px;
+                    .country {
+                        padding: 1rem;
+                        cursor: pointer;
+                        &:hover {
+                            background-color: rgba(0, 0, 0, 0.02);
+                        }
+                    }
+                }
+            }
+        }
+
+        .column,
+        app-country-list {
+            margin-bottom: 2rem;
+        }
+    }
+
+    .location {
+        width: fit-content;
+        font-size: 2rem;
+        background: #eeede7;
+        border-radius: 10px;
+        padding: 0.5rem;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        i {
+            font-size: 1rem;
+            padding-left: 0.5rem;
+            cursor: pointer;
+        }
+    }
+    .charts {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 1rem 0;
+
+        .chart {
+            flex: 1;
+            margin: 10px;
+            padding: 10px;
+            box-shadow: 1px 1px 5px ;
+            box-sizing: border-box;
+            border-radius: 10px;
+        }
+    }
+}

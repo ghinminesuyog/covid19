@@ -1,0 +1,19 @@
+.about-page {
+    @media screen and(min-width:700px) {
+        padding: 0 4rem;
+    }
+    .line {
+        h2 {
+            color: #868b8e;
+        }
+        h4 {
+            color: #333;
+            font-weight: 300;
+            a {
+                color: #868b8e;
+                font-weight: 400;
+                text-decoration: none;
+            }
+        }
+    }
+}

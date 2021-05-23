@@ -1,0 +1,41 @@
+<div class="homepage" (click)="hideSearchCountryList()">
+    <div class="country-container">
+        <div class="column">
+            <h1>
+                CoVid-19
+            </h1>
+            <div class="searchbar">
+                <div id="search">
+                    <i class=" fa fa-search"></i> <input id="search-input" [(ngModel)]="searchTerm"
+                        (ngModelChange)="searchTermUpdate($event)" placeholder="Search your country">
+                </div>
+                <div id="country-list" *ngIf="displaySearchCountryList()">
+                    <div class="country" *ngFor="let country of searchedCountries"
+                        (click)="selectCountry(country.code) ">
+                        {{country.name}}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <app-country-list *ngIf="noCountrySelected" [countries]="countries"></app-country-list>
+
+    </div>
+    <h3 class="location">
+        {{selectedCountry ? selectedCountry.name : 'Global'}} <i *ngIf="selectedCountry!=null"
+            (click)="$event.stopPropagation(); deselectCountry()" class="fa fa-close"></i>
+    </h3>
+    <div class="charts">
+        <!-- <global-chart class="chart" [graphNumber]="active" graphName="active" [data]="activeChartData">
+        </global-chart> -->
+
+        <global-chart class="chart" [graphNumber]="confirmed" graphName="confirmed" [data]="confirmedChartData">
+        </global-chart>
+
+        <global-chart class="chart" [graphNumber]="recovered" graphName="recovered" [data]="recoveredChartData">
+        </global-chart>
+
+        <global-chart class="chart" [graphNumber]="deceased" graphName="deceased" [data]="deathChartData">
+        </global-chart>
+
+    </div>
+</div>

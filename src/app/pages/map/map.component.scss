@@ -1,0 +1,33 @@
+h1 {
+    color: #868b8e;
+    text-align: center;
+}
+.charts {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 1rem 0;
+
+    .chart {
+        flex: 1;
+        box-shadow: 1px 1px 5px;
+        margin: 10px;
+        padding: 10px;
+        box-sizing: border-box;
+        border-radius: 10px;
+        max-width: 100%;
+    }
+
+    .active {
+        box-shadow: 1px 1px 5px #007bff;
+    }
+    .confirmed {
+        box-shadow: 1px 1px 5px #ff073a;
+    }
+    .deceased {
+        box-shadow: 1px 1px 5px #6e777f;
+    }
+    .recovered {
+        box-shadow: 1px 1px 5px#2ba848;
+    }
+}
